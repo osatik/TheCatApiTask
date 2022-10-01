@@ -6,4 +6,9 @@ class TestRunner {
         return Karate.run("C:\\Pr\\TheCatApi\\src\\test\\java\\features")
                 .tags("@wip");
            }
+
+    @Karate.Test
+    Karate testAll() {
+        return Karate.run().relativeTo(getClass());
+    }
 }
